@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candy 800</title>
+    
+    <link href="./dist/output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+
+</head>
+<style>
+  .font-audiowide {
+    font-family: 'Audiowide', cursive;
+  }
+</style>
+
+<body class="flex flex-col min-h-screen overflow-x-hidden bg-gray-100">
+    <!-- Overall body uses flex column, full height, and responsive background colors -->
+
+  <!-- ===== Header Section ===== -->
+  <div class="justify-between p-4 font-bold text-white bg-blue-600 shadow-lg lg:flex">
+    <!-- Header container with spacing, colors, and responsive flex layout -->
+    <img  src="dist/images/logo.png" alt="ECODRIVE" class="mx-auto mb-2 lg:ml-4 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0 w-xs">
+    
+    <!-- Site title -->
+     
+    <nav class="flex justify-center gap-3 text-lg lg:mt-5 sm:gap-3 lg:gap-3 md:gap-3 sm:mt-4 sm:text-2xl md:mr-4 font-audiowide">
+      <!-- Navigation menu centered with gap between links -->
+      <a href="Homepage.html" class="hover:text-yellow-200 hover:underline ">Home </a>
+      <p>></p>
+      <a href=""  class="hover:text-yellow-200 hover:underline">Candy 800</a>
+      
+      
+    </nav>
+  </div>
+  <div class="grid max-w-2xl grid-cols-1 mt-4 xl:ml-50 xl:gap-50 sm:grid-cols-2 lg:ml-20 lg:gap-20 md:mx-auto sm:mx-auto sm:gap-4">
+  <div class="relative mx-auto w-70 lg:w-90 ">
+
+    <!-- Carousel Container -->
+    <div id="carousel" class="relative w-full overflow-hidden carousel h-80 md:h-96">
+      <div class="w-full carousel-item">
+        <img src="dist/images/candyred800 (1).png" class="object-contain w-full h-full" />
+      </div>
+      <div class="w-full carousel-item">
+        <img src="dist/images/candyred800 (2).png" class="object-contain w-full h-full" />
+      </div>
+      <div class="w-full carousel-item">
+        <img src="dist/images/candygray800 (1).png" class="object-contain w-full h-full" />
+      </div>
+      <div class="w-full carousel-item">
+        <img src="dist/images/candygray800 (2).png" class="object-contain w-full h-full" />
+      </div>
+      <div class="w-full carousel-item">
+        <img src="dist/images/candyskyblue800 (1).png" class="object-contain w-full h-full" />
+      </div>
+      <div class="w-full carousel-item">
+        <img src="dist/images/candyskyblue800 (2).png" class="object-contain w-full h-full" />
+      </div>
+    </div>
+
+    <!-- Static Arrows -->
+    <div class="absolute inset-0 z-10 flex items-center justify-between px-4">
+      <button id="prevBtn" class="-ml-8 btn btn-circle">❮</button>
+      <button id="nextBtn" class="-mr-8 btn btn-circle">❯</button>
+    </div>
+  </div>
+  <div class="mt-8 ml-8 font-bold md:mt-17 md:ml-20 sm:ml-14 ">
+    <h1 class="text-xl font-bold tracking-wide text-black sm:text-2xl ">Candy 800</h1>
+    <h1 class="mt-4 text-xl tracking-wide text-black lg:gap-2 lg:inline-flex sm:text-2xl ">Price: <span class="text-green-500">₱39,000</span></h1>
+    <h1 class="mt-4 text-xl font-bold tracking-wide text-black lg:inline-flex sm:text-2xl">Downpayment:<span class="ml-2 text-xl tracking-wide text-green-500 sm:text-2xl ">₱4,500</span></h1>
+    <h1 class="mt-4 text-xl font-bold tracking-wide text-black lg:inline-flex sm:text-2xl ">Monthly:<span class="ml-2 text-xl tracking-wide text-green-500 sm:text-2xl lg:inline-flex">₱2,700</span> <span class="text-xl font-bold tracking-wide text-black sm:text-2xl lg:inline-flex">/15months</span></h1>
+</div>
+</div>
+
+
+
+
+  </div>
+
+  <div class="mb-12 w-[90%] font-semibold mx-auto mt-8 text-black sm:text-2xl tracking-wide">
+        <table class="w-full bg-white border border-collapse border-gray-300">
+            <thead>
+                <tr>
+                    <th colspan="2" class="px-4 py-2 text-2xl font-bold text-center bg-white border-gray-300 ">Specifications</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="px-4 py-2 border border-gray-300">Power</td>
+                    <td class="px-4 py-2 border border-gray-300">800 watts</td>
+                </tr>
+                <tr>
+                    <td class="px-4 py-2 border border-gray-300">Battery</td>
+                    <td class="px-4 py-2 border border-gray-300">48 volts 20ah</td>
+                </tr>
+                <tr>
+                    <td class="px-4 py-2 border border-gray-300">Battery Type</td>
+                    <td class="px-4 py-2 border border-gray-300">Sealed Lead Acid</td>
+                </tr>
+                <tr>
+                    <td class="px-4 py-2 border border-gray-300">Speed</td>
+                    <td class="px-4 py-2 border border-gray-300">45 km/h</td>
+                </tr>
+                <tr>
+                    <td class="px-4 py-2 border border-gray-300">Range</td>
+                    <td class="px-4 py-2 border border-gray-300">50 km / Full Charge</td>
+                </tr>
+                <tr>
+                    <td class="px-4 py-2 border border-gray-300">Charging Time</td>
+                    <td class="px-4 py-2 border border-gray-300">4 - 8 hrs</td>
+                </tr>
+                <tr>
+                    <th colspan="2" class="px-4 py-2 border border-gray-300 ">Brake System</th>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border border-gray-300">Front</td>
+                  <td class="px-4 py-2 border border-gray-300">Disc Brake</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border border-gray-300">Rear</td>
+                  <td class="px-4 py-2 border border-gray-300">Drum Brake</td>
+                </tr>
+                <tr>
+                    <th colspan="2" class="px-4 py-2 border border-gray-300">Tire</th>
+                    
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border border-gray-300">Front</td>
+                  <td class="px-4 py-2 border border-gray-300">3.0 - 10 Tubeless</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border border-gray-300">Rear</td>
+                  <td class="px-4 py-2 border border-gray-300">3.0 - 10 Tubeless</td>
+                </tr>
+                <tr>
+                    <td class="px-4 py-2 border border-gray-300">Available Colors</td>
+                    <td class="px-4 py-2 border border-gray-300">Red, Gray, Sky Blue</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  
+  
+
+  <!-- ===== Footer Section ===== -->
+  <div class="p-4 mt-auto text-2xl font-bold text-center text-white bg-blue-600">
+    <!-- Footer sticks to bottom (mt-auto) and changes color with breakpoints -->
+    &copy; 2025 My Website. All rights reserved.
+  </div>
+  
+<script src="carousel.js"></script>
+
+</body>
+</html>

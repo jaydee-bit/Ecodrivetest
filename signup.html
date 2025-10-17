@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoDrive - Sign Up</title>
+  <link rel="stylesheet" href="./dist/output.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <style>
+    .font-audiowide {
+      font-family: "Audiowide", cursive;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fadeIn {
+      animation: fadeIn 0.5s ease;
+    }
+  </style>
+</head>
+<body class="min-h-screen overflow-x-hidden bg-white">
+  <div class="flex flex-col min-h-screen lg:flex-row">
+    <!-- Left Section -->
+    <div
+      class="relative flex-col items-center justify-center hidden p-12 overflow-hidden text-white lg:flex lg:w-1/2 bg-gradient-to-br from-blue-600 to-blue-700"
+    >
+      <div class="absolute w-20 h-20 border-2 rounded-full top-10 left-10 border-white/20"></div>
+      <div class="absolute w-16 h-16 border-2 rounded-full top-20 right-20 border-yellow-400/30"></div>
+      <div class="absolute w-12 h-12 rounded-full bottom-20 left-20 bg-yellow-400/20"></div>
+      <div class="absolute w-8 h-8 rounded-full bottom-40 right-32 bg-white/10"></div>
+
+      <div class="z-10 max-w-lg text-center">
+        <img src="dist/images/logo.png" alt="EcoDrive Logo" class="mx-auto mb-8 xl:w-5xl" />
+        <h1 class="mb-6 font-bold xl:text-5xl lg:text-3xl">
+          Join the Future of EcoDrive
+        </h1>
+        <p class="text-xl opacity-90">
+          Create your account and become part of the electric mobility revolution.
+        </p>
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="flex flex-col w-full lg:w-1/2">
+      <!-- Mobile Header -->
+      <!-- Mobile Header (Fixed Height and Centered) -->
+        <div class="flex flex-col items-center justify-center text-center text-white h-25 bg-gradient-to-br from-blue-600 to-blue-700 lg:hidden">
+        <img src="dist/images/logo.png" alt="EcoDrive" class="mb-2 w-75" />
+        
+        </div>
+        <div class="mt-4 font-bold leading-tight text-center text-black lg:hidden">
+            <h1 class="mb-2 text-3xl">Create Account</h1>
+            <p class=" text-md opacity-90">Sign up to get started</p>
+
+        </div>
+
+
+
+      <!-- Form -->
+      <div class="flex items-center justify-center flex-1 p-8 bg-white lg:p-12 lg:bg-gray-50">
+        <div class="w-full max-w-md animate-fadeIn">
+          <button
+            class="items-center hidden mb-8 text-2xl text-gray-600 lg:flex lg:text-xl hover:text-gray-900"
+            onclick="history.back()"
+          >
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            Go back
+          </button>
+
+          <div class="hidden mb-8 lg:block">
+            <h2 class="mb-2 text-3xl font-bold text-gray-900 ">Create Account</h2>
+            <p class="text-gray-600">Sign up to get started.</p>
+          </div>
+
+          <!-- Signup Form -->
+          <form id="signupForm" onsubmit="handleSignup(event)">
+            <div class="mb-6">
+              <label for="newPhone" class="block mb-2 text-sm font-semibold text-gray-700">Phone Number</label>
+              <input
+                type="text"
+                id="newPhone"
+                name="newPhone"
+                placeholder="Enter your phone number"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                pattern="[0-9]{11}"
+                minlength="11"
+                maxlength="11"
+                required
+                class="w-full px-4 py-3.5 border-2 text-black border-gray-300 rounded-xl text-base focus:outline-none focus:border-blue-600 focus:ring-4 focus:ring-blue-100 transition-all duration-300"
+              />
+            </div>
+
+            <div class="mb-4">
+              <label for="newPassword" class="block mb-2 text-sm font-semibold text-gray-700">Password</label>
+              <input
+                type="password"
+                id="newPassword"
+                name="newPassword"
+                placeholder="Enter your password"
+                minlength="8"
+                maxlength="20"
+                required
+                class="text-black w-full px-4 py-3.5 border-2 border-gray-300 rounded-xl text-base focus:outline-none focus:border-blue-600 focus:ring-4 focus:ring-blue-100 transition-all duration-300"
+              />
+            </div>
+
+            <div class="mb-6">
+              <label for="confirmPassword" class="block mb-2 text-sm font-semibold text-gray-700">Confirm Password</label>
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                placeholder="Confirm your password"
+                minlength="8"
+                maxlength="20"
+                required
+                class="text-black w-full px-4 py-3.5 border-2 border-gray-300 rounded-xl text-base focus:outline-none focus:border-blue-600 focus:ring-4 focus:ring-blue-100 transition-all duration-300"
+              />
+            </div>
+
+            <button
+              type="submit"
+              class="w-full px-4 py-3.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-base font-semibold shadow-md hover:shadow-lg active:scale-[0.98] transition-all duration-200"
+            >
+              Sign Up
+            </button>
+
+            <p id="signupMessage" class="hidden mt-4 font-medium text-center text-red-600"></p>
+            <p id="successMessage" class="hidden mt-4 font-medium text-center text-green-600"></p>
+          </form>
+
+          <div class="mt-12 text-center text-gray-600">
+            <span class="text-sm md:text-base">Already have an account? </span>
+            <a href="Login.html" class="text-sm font-semibold text-blue-600 md:text-base hover:text-blue-700 hover:underline">
+              Login
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function handleSignup(event) {
+      event.preventDefault();
+
+      const phone = document.getElementById("newPhone").value;
+      const password = document.getElementById("newPassword").value;
+      const confirmPassword = document.getElementById("confirmPassword").value;
+      const errorMessage = document.getElementById("signupMessage");
+      const successMessage = document.getElementById("successMessage");
+
+      errorMessage.classList.add("hidden");
+      successMessage.classList.add("hidden");
+
+      if (password !== confirmPassword) {
+        errorMessage.textContent = "Passwords do not match.";
+        errorMessage.classList.remove("hidden");
+        return;
+      }
+
+      const newUser = { phone, password };
+      localStorage.setItem("user", JSON.stringify(newUser));
+
+      successMessage.textContent = "Account created successfully!";
+      successMessage.classList.remove("hidden");
+
+      setTimeout(() => {
+        location.href = "Login.html";
+      }, 2000);
+    }
+
+    console.log("pogi");
+  </script>
+</body>
+</html>
